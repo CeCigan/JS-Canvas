@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Upr-01</h3>
+    <canvas id="can1" width="500" height="300" style="border: 2p dotted black">
+    </canvas>
+    <div class="result1"></div>
+    <script>
+      let canvas = document.getElementById('can1')
+      let ctx = canvas.getContext('2d')
+
+      let image = new Image()
+      image.src = 'image.png'
+
+      image.onload = function () {
+        ctx.drawImage(image, 10, 10)
+
+        ctx.drawImage(image, 100, 10)
+        ctx.scale(0.5, 0.5)
+
+        ctx.drawImage(image, 200, 200)
+        ctx.scale(2.1, 2.1)
+      }
+    </script>
+  </body>
+</html>

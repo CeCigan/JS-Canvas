@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Upr-01</h3>
+    <canvas id="can1" width="500" height="225" style="border: 2px solid black">
+    </canvas>
+    <div class="result1"></div>
+    <script>
+      let canvas = document.getElementById('can1')
+      let ctx = canvas.getContext('2d')
+
+      ctx.beginPath()
+      ctx.fillStyle = '#331a00'
+      ctx.fillRect(300, 50, 20, 30)
+      ctx.closePath()
+
+      ctx.beginPath()
+      ctx.moveTo(200, 100)
+      ctx.lineTo(350, 100)
+      ctx.lineTo(275, 50)
+      ctx.fillStyle = '#964b00'
+      ctx.fill()
+
+      ctx.beginPath()
+      ctx.fillStyle = '#331a00'
+      ctx.fillRect(200, 100, 150, 125)
+      ctx.closePath()
+
+      ctx.beginPath()
+      ctx.fillStyle = '#964b00'
+      ctx.fillRect(290, 150, 50, 75)
+      ctx.closePath()
+    </script>
+  </body>
+</html>
